@@ -1,0 +1,69 @@
+
+
+<ion-header [translucent]="true">
+  <ion-toolbar class="Custom-toolbar">
+    <ion-title>BMI Result</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+<ion-label>
+  {{userName}} {{userSurname}} BMI Result:
+</ion-label>
+
+  <div class="imageContainer">
+    <app-graph></app-graph>
+  </div>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+        <ion-card class="custom-card">
+          <ion-card-header>
+            <ion-card-title>Height</ion-card-title>
+            <ion-card-subtitle>{{ userHeight }} cm</ion-card-subtitle>
+          </ion-card-header>
+        
+        </ion-card>
+      </ion-col>
+
+      <ion-col class="custom-column">
+
+        <ion-card class="custom-card">
+          <ion-card-header>
+            <ion-card-title>Weight</ion-card-title>
+            <ion-card-subtitle>{{ userWeight }} cm</ion-card-subtitle>
+          </ion-card-header>
+        
+       
+        </ion-card>
+
+      </ion-col>
+     
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid class="custom-grid">
+    <ion-row>
+      <ion-col class="custom-column2">
+
+        <ion-card class="custom-card2">
+          <ion-card-header>
+            
+            <ion-card-subtitle>Result Message:</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content> {{bmiMessage}} </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+     
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

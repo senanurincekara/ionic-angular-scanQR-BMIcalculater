@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar class="Custom-toolbar">
+    <ion-title>Barkod Okutma</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home-page" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="welcome-container">
+    <ion-title>BMI hesaplama</ion-title>
+    <p class="welcome-text">Vücut kitle indeksinizi kontrol etmek için ilk olarak giriş bilgilerinizin yer aldığı QR kodu okutunuz!</p>
+  </div>
+
+  <div class="imageContainer">
+    <ion-img class="ion-image-container" src="/assets/barcode.png" alt="barcode"></ion-img>
+  </div>
+
+  <ion-button (click)="startScanBarcode()" >
+    <ion-icon color="dark" slot="start" name="star"></ion-icon>
+    Barkod Okutmak için tıklayınız
+  </ion-button>
+  
+</ion-content>

@@ -8,8 +8,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'scan',
     pathMatch: 'full'
+  },
+  {
+    path: 'scan',
+    loadChildren: () => import('./pages/scan/scan.module').then( m => m.ScanPageModule)
+  },
+  {
+    path: 'bmi',
+    loadChildren: () => import('./pages/bmi/bmi.module').then( m => m.BmiPageModule)
   },
 ];
 
